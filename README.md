@@ -1,60 +1,64 @@
-#CHATSPACE
+# CHATSPACE
 
-###TABLES
+### TABLES
 - messages
 - users
 - groups
 - usergroups
 
-###Relations
-- messages
- - belongs_to user
- - belongs_to group
-- users
- - has_many messages
- - has_many groups, through: :users_groups
-- groups
- - has_many messages
- - has_many users, through: :users_groups
-- usersgroups
- - belongs_to user
- - belongs_to group
+### Relations
+- message
+  - belongs_to user
+  - belongs_to group
+- user
+  - has_many messages
+  - has_many groups, through: :users_groups
+- group
+  - has_many messages
+  - has_many users, through: :users_groups
+- user_groups
+  - belongs_to user
+  - belongs_to group
 
-###colums
-####messages
-|:--:|:--:|:--:|:--:|:--:|
+### colums
+#### messages
+
 |id|body|image|group_id|user_id|
+|:--:|:--:|:--:|:--:|:--:|
 |int|txt|txt|references|references|
 
-####users
-|:--:|:--:|:--:|:--:|:--:|
+#### users
+
 |id|name|email|password|
+|:--:|:--:|:--:|:--:|
 |int|str|str|str|
 
-####groups
-|:--:|:--:|
+#### groups
+
 |id|team|
+|:--:|:--:|
 |id|str|
 
-####usergroups
-|:--:|:--:|
+#### usersgroups
+
 |id|user_id|group_id|
+|:--:|:--:|:--:|
 |id|references|references|
 
 ### NOT NULL制約
 - users
- - name
- - email
- - password
+  - name
+  - email
+  - password
 - messages
- - image
- - body
+  - image
+  - body
 - groups
- - team
+  - team
 
 ### 一意性制約
  - users
-  - name
-  - email
+   - name
+   - email
  - groups
-  - team
+    - team
