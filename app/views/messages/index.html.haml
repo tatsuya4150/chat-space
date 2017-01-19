@@ -1,0 +1,34 @@
+.chat
+  .chat-side
+    = render partial: 'layouts/side_menu'
+
+  .chat-main
+    .chat-header.clearfix
+      .chat-header--left
+        %h2
+          ='グループ名'
+        %p.chat-header__users
+          = 'menber:'
+          %span.chat-header__user
+
+      .chat-header--right
+        %a.chat-header__edit-btn{ href: '' } Edit
+    .chat-body
+      %ul.chat-messages
+        %li.chat-message
+          .chat-message__header.clearfix
+            %p.chat-message__name
+            %p.chat-message__time
+          %p.chat-message__body
+
+    .chat-footer
+      .chat-footer__body
+      %label.chat-footer__file
+        %i.fa.fa-image
+
+    .chat-footer
+      .chat-footer__body
+        %textarea{ row: 1, placeholder: 'type a message' }
+        %label.chat-footer__file
+          %i.fa.fa-image
+      %input{ type: "submit", value: "Send" }
