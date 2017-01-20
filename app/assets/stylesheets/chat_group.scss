@@ -13,7 +13,7 @@
 .chat-user {
   height: 100px;
   padding: 20px;
-  color: #fff;
+  color: $white;
   background-color: #253141;
 
   h5 {
@@ -31,7 +31,7 @@
     display: inline-block;
     margin: 15px 0 15px 3px;
     line-height: 28px;
-    color: #fff;
+    color: $white;
     font-size: 20px;
   }
 }
@@ -39,13 +39,13 @@
 .chat-groups {
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: $white;
   list-style: none;
 
   .chat-group__link {
     display: block;
     padding: 20px 20px;
-    color: #fff;
+    color: $white;
 
     &:hover {
       background-color: #384a62;
@@ -78,7 +78,7 @@
 .chat-header {
   padding-right: 40px;
   padding-left: 40px;
-  background-color: #fff;
+  background-color: $white;
   border-bottom: 1px solid #eee;
 
   .chat-header--left {
@@ -114,7 +114,7 @@
     padding-right: 20px;
     padding-left: 20px;
     line-height: 40px;
-    color: #38aef0;
+    color: $blue;
     font-size: 14px;
     border: 2px solid;
   }
@@ -165,7 +165,6 @@
   }
 }
 
-$textarea_height: 50px;
 
 .chat-footer {
   position: absolute;
@@ -182,8 +181,8 @@ $textarea_height: 50px;
     width: 100px;
     margin-left: 15px;
     line-height: $textarea_height;
-    color: #fff;
-    background-color: #38aef0;
+    color: $white;
+    background-color: $blue;
     text-align: center;
     border: none;
     padding: 0;
@@ -228,8 +227,8 @@ $textarea_height: 50px;
   width: 980px;
   margin: 60px auto;
   padding: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: $white;
+  border: $normal_border;
   border-radius: 5px;
 
   h1 {
@@ -241,13 +240,13 @@ $textarea_height: 50px;
   .chat-group-form__errors {
     margin: 30px 0;
     padding: 20px 40px;
-    border: 1px solid #ddd;
+    border: $normal_border;
     border-radius: 2px;
     text-align: center;
 
     h2 {
       margin-bottom: 10px;
-      color: #f05050;
+      color: $red;
       font-size: 14px;
     }
 
@@ -299,7 +298,7 @@ $textarea_height: 50px;
     padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: $normal_border;
 
     .chat-group-user__name {
       float: left;
@@ -311,11 +310,11 @@ $textarea_height: 50px;
       cursor: pointer;
 
       &.chat-group-user__btn--add {
-        color: #38aef0;
+        color: $blue;
       }
 
       &.chat-group-user__btn--remove {
-        color: #f05050;
+        color: $red;
       }
     }
   }
@@ -323,8 +322,8 @@ $textarea_height: 50px;
   .chat-group-form__action-btn {
     display: inline-block;
     padding: 12px 20px;
-    color: #fff;
-    background-color: #38aef0;
+    color: $white;
+    background-color: $blue;
     border: 0;
   }
 }
