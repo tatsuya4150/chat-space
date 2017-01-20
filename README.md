@@ -3,17 +3,17 @@
 ### TABLES
 - messages
 - users
-- groups
+- chat_groups
 - usergroups
 
 ### Relations
 - message
   - belongs_to user
-  - belongs_to group
+  - belongs_to chat_group
 - user
   - has_many messages
-  - has_many groups, through: :users_groups
-- group
+  - has_many chat_groups, through: :users_groups
+- chat_group
   - has_many messages
   - has_many users, through: :users_groups
 - user_groups
@@ -33,7 +33,7 @@
 |:--:|:--:|:--:|:--:|
 |int|str|str|str|
 
-#### groups
+#### chat_groups
 
 |id|team|
 |:--:|:--:|
@@ -53,12 +53,12 @@
 - messages
   - image
   - body
-- groups
+- chat_groups
   - team
 
 ### 一意性制約
  - users
    - name
    - email
- - groups
+ - caht_groups
     - team

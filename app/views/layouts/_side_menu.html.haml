@@ -1,0 +1,15 @@
+.chat-user.clearfix
+  %h5
+  = '名前'
+  .chat-user__actions
+    %a.chat-user__action{ href: '' }
+      %i.fa.fa-pencil-square-o
+    %a.chat-user__action{ href: '' }
+      %i.fa.fa-cog
+%ul.chat-groups
+  %li.chat-group
+    %a.chat-group__link{ href: '' }
+      %p.chat-group__name
+        = 'グループ名'
+      %p.chat-group__message
+        = 'メッセージ'
