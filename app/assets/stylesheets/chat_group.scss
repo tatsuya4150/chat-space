@@ -4,7 +4,6 @@ $red: #f05050;
 $textarea_height: 50px;
 $normal_border: 1px solid #ddd;
 
-
 .chat {
   min-width: 980px;
   height: 100%;
@@ -17,12 +16,6 @@ $normal_border: 1px solid #ddd;
   background-color: #2f3e51;
 }
 
-.chat-user {
-  height: 100px;
-  padding: 20px;
-  color: $white;
-  background-color: #253141;
-
   h5 {
     float: left;
     line-height: 60px;
@@ -30,11 +23,18 @@ $normal_border: 1px solid #ddd;
     font-size: 16px;
   }
 
-  .chat-user__actions {
+
+.chat-user {
+  height: 100px;
+  padding: 20px;
+  color: $white;
+  background-color: #253141;
+
+  &__actions {
     float: right;
   }
 
-  .chat-user__action {
+  &__action {
     display: inline-block;
     margin: 15px 0 15px 3px;
     line-height: 28px;
@@ -88,11 +88,11 @@ $normal_border: 1px solid #ddd;
   background-color: $white;
   border-bottom: 1px solid #eee;
 
-  .chat-header--left {
+  &--left {
     float: left;
   }
 
-  .chat-header--right {
+  &--right {
     float: right;
   }
 
@@ -105,17 +105,17 @@ $normal_border: 1px solid #ddd;
     font-weight: 400;
   }
 
-  .chat-header__users {
+  &__users {
     line-height: 20px;
     color: #999;
     font-size: 12px;
   }
 
-  .chat-header__user {
+  &__user {
     margin-left: 3px;
   }
 
-  .chat-header__edit-btn {
+  &__edit-btn {
     display: inline-block;
     margin: 28px 0;
     padding-right: 20px;
@@ -143,24 +143,24 @@ $normal_border: 1px solid #ddd;
   .chat-message {
     margin-bottom: 5px;
 
-    .chat-message__header {
+    &__header {
       line-height: 20px;
     }
 
-    .chat-message__name {
+    &__name {
       float: left;
       margin-bottom: 10px;
       font-weight: 600;
     }
 
-    .chat-message__time {
+    &__time {
       float: left;
       margin-left: 10px;
       color: #aaa;
       font-size: 12px;
     }
 
-    .chat-message__body {
+    &__body {
       font-size: 14px;
 
       img{
@@ -195,7 +195,7 @@ $normal_border: 1px solid #ddd;
     padding: 0;
   }
 
-  .chat-footer__body{
+  &__body{
     float: left;
     width: calc(100% - 115px);
     height: $textarea_height;
@@ -211,7 +211,7 @@ $normal_border: 1px solid #ddd;
       display: block;
     }
 
-    .chat-footer__file {
+    &__file {
       position: absolute;
       top: 0;
       right: 0;
@@ -244,7 +244,7 @@ $normal_border: 1px solid #ddd;
     text-align: center;
   }
 
-  .chat-group-form__errors {
+  &__errors {
     margin: 30px 0;
     padding: 20px 40px;
     border: $normal_border;
@@ -270,29 +270,29 @@ $normal_border: 1px solid #ddd;
     }
   }
 
-  .chat-group-form__field {
+  &__field {
     margin-top: 30px;
 
-    .chat-group-form__field--left {
+    &--left {
       float: left;
       width: 30%;
       padding-right: 20px;
       padding-left: 20px;
     }
 
-    .chat-group-form__field--right {
+    &--right {
       float: right;
       width: 70%;
     }
 
-    .chat-group-form__label {
+    &__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
     }
 
-    .chat-group-form__input {
+    &__input {
       float: left;
       width: 100%;
       line-height: 30px;
@@ -307,26 +307,26 @@ $normal_border: 1px solid #ddd;
     font-size: 14px;
     border-bottom: $normal_border;
 
-    .chat-group-user__name {
+    &__name {
       float: left;
     }
 
-    .chat-group-user__btn {
+    &__btn {
       float: right;
       display: inline-block;
       cursor: pointer;
 
-      &.chat-group-user__btn--add {
+      &--add {
         color: $blue;
       }
 
-      &.chat-group-user__btn--remove {
+      &--remove {
         color: $red;
       }
     }
   }
 
-  .chat-group-form__action-btn {
+  &__action-btn {
     display: inline-block;
     padding: 12px 20px;
     color: $white;
