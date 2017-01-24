@@ -16,13 +16,6 @@ $normal_border: 1px solid #ddd;
   background-color: #2f3e51;
 }
 
-  h5 {
-    float: left;
-    line-height: 60px;
-    letter-spacing: 2px;
-    font-size: 16px;
-  }
-
 
 .chat-user {
   height: 100px;
@@ -41,6 +34,14 @@ $normal_border: 1px solid #ddd;
     color: $white;
     font-size: 20px;
   }
+
+  h5 {
+    float: left;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+
 }
 
 .chat-groups {
