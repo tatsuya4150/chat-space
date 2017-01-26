@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -21,6 +20,7 @@ module ChatSpace
          helper_specs: false,
          controller_specs: true
        g.fixture_replacement :factory_girl, dir: 'spec/factories'
+        config.i18n.default_locale = :ja
      end
   end
 end

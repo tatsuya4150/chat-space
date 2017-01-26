@@ -1,6 +1,5 @@
 .chat-user.clearfix
-  %h5
-  = '名前'
+  %h5 #{current_user.name}
   .chat-user__actions
     %a.chat-user__action{ href: '' }
       %i.fa.fa-pencil-square-o
