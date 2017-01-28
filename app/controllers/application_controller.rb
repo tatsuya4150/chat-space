@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resorce)
     new_user_session_path
   end
+
+  def after_sign_in_path_for(resorce)
+    session[:previous_url] || chat_groups_path
+  end
 end
