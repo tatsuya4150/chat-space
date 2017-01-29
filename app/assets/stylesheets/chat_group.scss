@@ -196,6 +196,22 @@ $normal_border: 1px solid #ddd;
     padding: 0;
   }
 
+  &__file {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 40px;
+      height: $textarea_height;
+      line-height: $textarea_height;
+      text-align: center;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+    }
+
   &__body{
     float: left;
     width: calc(100% - 115px);
@@ -210,23 +226,6 @@ $normal_border: 1px solid #ddd;
       border: none;
       resize: none;
       display: block;
-    }
-
-    &__file {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block;
-      width: 40px;
-      height: $textarea_height;
-      line-height: $textarea_height;
-      text-align: center;
-
-      cursor: pointer;
-
-      input {
-        display: none;
-      }
     }
   }
 }

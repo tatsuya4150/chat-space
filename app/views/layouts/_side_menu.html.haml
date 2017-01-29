@@ -1,14 +1,19 @@
 .chat-user.clearfix
-  %h5 #{current_user.name}
+  %h5= current_user.name
   .chat-user__actions
-    %a.chat-user__action{ href: '' }
+    = link_to new_chat_group_path, {class: "chat-user__action"} do
       %i.fa.fa-pencil-square-o
-    %a.chat-user__action{ href: '' }
+    = link_to edit_user_registration_path, {class: "chat-user__action"} do
       %i.fa.fa-cog
+
 %ul.chat-groups
-  %li.chat-group
-    %a.chat-group__link{ href: '' }
-      %p.chat-group__name
-        = 'グループ名'
-      %p.chat-group__message
-        = 'メッセージ'
+  - current_user.chat_groups.each do |chat_group|
+    %li.chat-group
+      = link_to chat_group_messages_path(chat_group), {class: "chat-group__link"} do
+        %p.chat-group__name= chat_group.team
+        %p.chat-group__message
+          - if chat_group.messages.last.blank?
+            まだメッセージはありません。
+          - else
+            = chat_group.messages.last.body
+
