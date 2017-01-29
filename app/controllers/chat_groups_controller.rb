@@ -17,7 +17,6 @@ class ChatGroupsController < ApplicationController
     if @chat_group.save
       redirect_to chat_group_messages_path(@chat_group), notice: "グループが作成されました。"
     else
-      flash.now[:alert] = "作成に失敗しました"
       render :new
     end
   end
