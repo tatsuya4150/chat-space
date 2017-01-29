@@ -11,7 +11,7 @@
           - @chat_group.users.each do |user|
             %span.chat-header__user= user.name
       .chat-header--right
-        %a.chat-header__edit-btn{ href: edit_chat_group_path(@chat_group) } Edit
+        = link_to "Edit", edit_chat_group_path(@chat_group), { class: "chat-header__edit-btn" }
     .chat-body
       %ul.chat-messages
         - @chat_group.messages.each do |message|
@@ -23,8 +23,6 @@
                 = message.created_at
             %p.chat-message__body
               = message.body
-
-
 
     .chat-footer
       = form_for [@chat_group, @message], class: 'clearfix' do |f|
