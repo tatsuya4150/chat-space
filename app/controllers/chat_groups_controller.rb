@@ -21,14 +21,8 @@ class ChatGroupsController < ApplicationController
     end
   end
 
-  def edit
-  end
 
   private
-    def set_chat_group
-      @chat_group = ChatGroup.find(params[:id])
-    end
-
     def chat_group_params
       params.require(:chat_group).permit(:team, user_ids: [])
     end
