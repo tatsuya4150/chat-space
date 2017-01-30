@@ -10,4 +10,6 @@ class User < ApplicationRecord
   has_many :messages
 
   validates :email, presence: true
+  validates :name, presence: true, length: { maximum: 6 }
+  validates :password, presence: true, length: { minimum: 8 }
 end
