@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', "~> 3.1.0"
   gem 'factory_girl_rails', "~> 4.4.1"
+  gem 'faker'
 end
 
 group :development do
@@ -56,5 +57,3 @@ end
   gem "font-awesome-rails"
   gem 'devise'
   gem 'pry-rails'
-  gem 'faker'
-

@@ -10,7 +10,6 @@ describe User do
     it "is invalid without a name" do
       user = build(:user, name: "")
       user.valid?
-            # binding.pry
       expect(user.errors[:name]).to include("が入力されていません。")
     end
 
@@ -59,7 +58,6 @@ describe User do
 
     it "is invalid 7 characters or less" do
       user = build(:user, password: "0000000", password_confirmation: "0000000")
-      binding.pry
       user.valid?
       expect(user.errors[:password]).to include("は8文字以上に設定して下さい。")
     end
