@@ -3,7 +3,6 @@ FactoryGirl.define do
     team 'サンプルチャットグループ'
 
     after(:build) do |chat_group|
-      binding.pry
       chat_group.users << build(:user)
     end
   end
