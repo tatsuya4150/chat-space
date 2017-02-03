@@ -40,6 +40,10 @@ group :development, :test do
   gem 'faker'
 end
 
+group :test do
+  gem "database_cleaner"    #データベースをまっさらな状態で各specが実行できるようにする
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -57,3 +61,4 @@ end
   gem "font-awesome-rails"
   gem 'devise'
   gem 'pry-rails'
+  gem 'rails-i18n'

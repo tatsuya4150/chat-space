@@ -6,5 +6,4 @@ class ChatGroup < ApplicationRecord
   accepts_nested_attributes_for :users, allow_destroy: true
 
   validates :team, presence: true
-  validates :users, presence: true
 end
