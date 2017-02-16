@@ -11,12 +11,16 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.chat_group = @chat_group
-
-    if @message.save
-      redirect_to chat_group_messages_path(@chat_group), notice: 'メッセージを送信しました'
-    else
-      flash.now[:alert] = 'メッセージの送信ができませんでした'
-      render :index
+    respond_to do |format|
+      if @message.save
+        format.html do
+          redirect_to chat_group_messages_path(@chat_group)
+        end
+        format.json
+      else
+        flash.now[:alert] = 'メッセージの送信ができませんでした'
+        render :index
+      end
     end
   end
 
