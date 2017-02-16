@@ -17,7 +17,6 @@ class MessagesController < ApplicationController
           redirect_to chat_group_messages_path(@chat_group)
         end
         format.json
-      # redirect_to chat_group_messages_path(@chat_group), notice: 'メッセージを送信しました'
       else
         flash.now[:alert] = 'メッセージの送信ができませんでした'
         render :index
