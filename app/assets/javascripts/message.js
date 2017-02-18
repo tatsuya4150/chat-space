@@ -52,7 +52,8 @@ $(function(){
 
     var fd = new FormData($(this)[0]);
 
-    $.ajax(document.location.href + '.json', {
+    $.ajax({
+      url: document.location.href,
       method: 'POST',
       processData: false,
       contentType: false,
@@ -77,7 +78,8 @@ $(function(){
   // 10秒に1回チャット部分の更新
   if (document.location.href.match(/\/chat_groups\/\d+\/messages/)) {
     setInterval(function(){
-      $.ajax(document.location.href + '.json', {
+      $.ajax({
+        url: document.location.href,
         method: 'GET',
         dataType: 'json',
         success: function(json) {
